@@ -1,0 +1,61 @@
+/* styles.css */
+
+/* Container for the App to make everything aligned */
+.App {
+  position: relative;
+  height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the map */
+.MapContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Search Bar styles */
+.search-bar {
+  position: absolute;
+  top: 20px; /* Spacing from the top */
+  left: 80%;
+  transform: translateX(-50%);
+  width: 80%; /* Adjust width */
+  max-width: 400px; /* Max width for the search bar */
+  z-index: 999; /* Ensure it is on top of the map */
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Màu nền spinner */
+  border-top: 4px solid #3498db; /* Màu vòng quay */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite; /* Quay vòng */
+  margin-top: 10px;
+}
+
+/* Định nghĩa animation quay */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
